@@ -1,11 +1,9 @@
-import React from 'react';
+import React from "react";
+import sc from "./Headbar.module.css";
+
 
 const Headbar = () => {
-    return (
-        <div>
-            
-        </div>
-    );
+  return <div className={sc.main}></div>;
 };
 
 export default Headbar;
