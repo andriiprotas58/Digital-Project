@@ -14,10 +14,10 @@ const Headbar = () => {
   return (
     <div className={sc.main}>
       <img className={sc.conLogo} src={logo} alt="Digital project" />
-      <div>
+      <div className={sc.conLinks}>
         {headbarbuttons.map((e) => {
           return (
-            <a className={sc.mainlinks} url={e.url}>
+            <a className={sc.mainlink} href={e.url}>
               {e.name.toUpperCase()}
             </a>
           );
