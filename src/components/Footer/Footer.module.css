@@ -1,13 +1,15 @@
 .main {
   display: flex;
+  flex-direction: column;
   width: 100vw;
-  height: 417px;
   background-color: #2c2c2c;
   padding: 0 115px;
   padding-top: 58px;
-
-  
+  align-items: center;
+  font-family: "TT Hoves";
+  color: #ffffff;
 }
+
 .logo {
   height: 94px;
 }
@@ -15,4 +17,50 @@
 .textblock {
   display: flex;
   flex-direction: column;
+}
+.contact {
+  margin-left: 19px;
+  max-width: 314px;
+}
+.mainlink {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 14px;
+  margin-bottom: 16px;
+}
+h4 {
+  margin-bottom: 25px;
+}
+.icon {
+  width: 20px;
+  height: 20px;
+}
+.social {
+  display: flex;
+  align-items: center;
+  margin-right: 40px;
+}
+.logo,
+.textblock {
+  margin-right: 80px;
+}
+.maincontent {
+  display: flex;
+}
+.copyright {
+  margin-top: 60px;
+  height: 70px;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Open Sans", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: 0px;
+  text-align: left;
+  color: #c8c8c880;
+  border-top: 1px solid #c8c8c880;
 }
