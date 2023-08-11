@@ -2,7 +2,7 @@ import React from "react";
 import sc from "./Link.module.css";
 import arrow from "../../../assets/ico-shape.svg";
 
-const Link = ({ className, text, href }) => {
+const Link = ({ className, text, href = "" }) => {
   return (
     <a className={[sc.Link, className].join(" ")} href={href}>
       {(text + " ").toUpperCase()}
