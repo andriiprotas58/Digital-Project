@@ -1,0 +1,16 @@
+.Link {
+  display: flex;
+  align-items: center;
+  padding: 24px 50px;
+  font-family: TT Hoves;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 12px;
+  letter-spacing: 0.2em;
+  text-align: left;
+  background-color: #ffffff;
+  color: #333333;
+}
+.Link img {
+  height: 8px;
+}

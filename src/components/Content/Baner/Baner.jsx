@@ -3,6 +3,7 @@ import sc from "./Baner.module.css";
 import photo1 from "../../../assets/Rectangle 6.png";
 import photo2 from "../../../assets/1.jpg";
 import arrow from "../../../assets/ico-shape.svg";
+import Link from "../../UI/Link/Link";
 
 const Baner = ({ className }) => {
   const [baners, setBaner] = useState([
@@ -61,20 +62,14 @@ const Baner = ({ className }) => {
       </div>
       <div className={sc.baner}>
         <img src={baners[activeBaner].img} alt="" />
-        <a className={sc.BanerLink} href={baners[activeBaner].herf}>
-          {"Взглянуть ".toUpperCase()}
-          <img
-            style={{
-              MozTransform: "scaleX(-1)",
-              OTransform: "scaleX(-1)",
-              WebkitTransform: "scaleX(-1)",
-              transform: "scaleX(-1)",
-              filter: "flipH",
-            }}
-            src={arrow}
-            alt=""
-          />
-        </a>
+
+        <Link
+          className={sc.banerLink}
+          text={"Взглянуть"}
+          href={baners[activeBaner].herf}
+        />
+
+        
       </div>
     </div>
   );
