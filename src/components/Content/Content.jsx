@@ -4,6 +4,7 @@ import sc from "./Content.module.css";
 import photo1 from "../../assets/Rectangle 6.png";
 import photo2 from "../../assets/1.jpg";
 import arrow from "../../assets/ico-shape.svg";
+import { useEffect } from "react";
 
 const Content = () => {
   const [baners, setBaner] = useState([
@@ -13,6 +14,14 @@ const Content = () => {
 
   const [activeBaner, setActiveBaner] = useState(0);
 
+  useEffect(() => {
+    if (activeBaner >= baners.length) {
+      setActiveBaner(0);
+    }
+    if (activeBaner < 0) {
+      setActiveBaner(baners.length - 1);
+    }
+  }, [activeBaner]);
   return (
     <div className={sc.main}>
       <div className={sc.contentblock}>
@@ -21,10 +30,26 @@ const Content = () => {
           <h2>{baners[activeBaner].text.split(" ")[1].toUpperCase()}</h2>
 
           <div className={sc.buttonBlock}>
-            <button>
+            <button
+              onClick={() => {
+                if (activeBaner - 1 < 0) {
+                  setActiveBaner(baners.length - 1);
+                } else {
+                  setActiveBaner(activeBaner - 1);
+                }
+              }}
+            >
               <img src={arrow} alt="" />
             </button>
-            <button>
+            <button
+              onClick={() => {
+                if (activeBaner + 1 >= baners.length) {
+                  setActiveBaner(0);
+                } else {
+                  setActiveBaner(activeBaner + 1);
+                }
+              }}
+            >
               <img
                 style={{
                   MozTransform: "scaleX(-1)",
