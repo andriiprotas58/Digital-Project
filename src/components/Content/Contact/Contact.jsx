@@ -13,13 +13,17 @@ const Contact = ({ className }) => {
           <input type="text" placeholder="Номер телефона" />
           <input type="text" placeholder="E-mail" />
           <input type="text" placeholder="Интересуещий товар/услуга" />
-          <input type="text" placeholder="Сообщение" />
+          <textarea placeholder="Сообщение"></textarea>
         </div>
 
         <img src={img} alt="" />
       </div>
-      <p>Отправляя заявку Вы соглашаетесь с политикой конфиденциальности</p>
-      <Link text={"Отправить"} style={1} />
+      <div className={sc.checkboxCon}>
+        <input className={sc.checkbox} type="checkbox" id="" />
+        <p>Отправляя заявку Вы соглашаетесь с политикой конфиденциальности</p>
+      </div>
+
+      <Link className={sc.Link} text={"Отправить"} style={1} />
     </div>
   );
 };

@@ -14,11 +14,16 @@
   color: #bdbdbd;
   margin-bottom: 22px;
 }
+
+.Link {
+  align-self: flex-start;
+}
 .contactCon {
   display: flex;
   flex-direction: row;
 }
-.inputCon input {
+.inputCon input,
+textarea {
   border: 0;
   outline: none;
   background-color: #f3f3f3;
@@ -32,12 +37,13 @@
   text-align: left;
 }
 
-.inputCon input::placeholder {
+.inputCon input::placeholder,
+textarea {
   color: #8d8d8d;
 }
-.inputCon input::placeholder::after {
-  content: " *";
-  color: #c30000;
+.inputCon textarea {
+  resize: none;
+  height: 100%;
 }
 
 .inputCon {
@@ -49,4 +55,31 @@
 .contactCon img {
   height: 369px;
   margin-left: 30px;
+}
+
+.checkbox {
+  outline: 0;
+  height: 24px;
+  width: 24px;
+  margin-right: 1em;
+}
+
+.checkboxCon {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  max-width: 515px;
+  align-self: flex-start;
+  display: flex;
+  box-shadow: 0px 0px 0px 0px #0099fa27 inset;
+  margin: 21px 0;
+}
+
+.checkboxCon p {
+  font-family: TT Hoves;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17px;
+  letter-spacing: 0.03em;
+  text-align: left;
 }
