@@ -10,11 +10,11 @@ import img5 from "../../../assets/image 18.png";
 
 const Projects = () => {
   const [projects, setProjects] = useState([
-    { name: "Досуговый центр", href: "", img: img1 },
-    { name: "Театр", href: "", img: img2 },
-    { name: "Спорткомплекс", href: "", img: img3 },
-    { name: "Жилые дома", href: "", img: img4 },
-    { name: "Культура", href: "", img: img5 },
+    { name: "Досуговый центр", href: "", img: img1, font_size: "64px" },
+    { name: "Театр", href: "", img: img2, font_size: "64px" },
+    { name: "Спорт", href: "", img: img3, font_size: "50px" },
+    { name: "Жилые дома", href: "", img: img4, font_size: "64px" },
+    { name: "Культура", href: "", img: img5, font_size: "54px" },
   ]);
 
   return (
@@ -23,14 +23,20 @@ const Projects = () => {
       <div className={sc.projects}>
         {projects.map((e) => {
           return (
-            <div>
-              <img src={e.img} alt="" />
-              <Link text="Подробнее" />
+            <div className={sc.project}>
+              <img className={sc.img} src={e.img} alt="" />
+              <div className={sc.blackwall}></div>
+              <div className={sc.lincCon}>
+                <h2 style={{ fontSize: e.font_size }}>
+                  {e.name.toUpperCase()}
+                </h2>
+                <Link className={sc.link} text="Подробнее" style={1} />
+              </div>
             </div>
           );
         })}
       </div>
-      <Link text={"Все продукты"} />
+      <Link className={sc.blackLink} text={"Все продукты"} style={1}/>
     </div>
   );
 };
