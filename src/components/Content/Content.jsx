@@ -4,6 +4,7 @@ import Baner from "./Baner/Baner";
 import About from "./About/About";
 import Goals from "./Goals/Goals";
 import Projects from "./Projects/Projects";
+import Contact from "./Contact/Contact";
 
 const Content = () => {
   return (
@@ -11,7 +12,8 @@ const Content = () => {
       <Baner className={sc.contentblock} />
       <About className={sc.contentblock} />
       <Goals className={sc.contentblock} />
-      <Projects />
+      <Projects className={sc.contentblock} />
+      <Contact className={sc.contentblock} />
     </div>
   );
 };
