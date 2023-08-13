@@ -3,6 +3,7 @@ import sc from "./Contact.module.css";
 import Link from "./../../UI/Link/Link";
 import img from "./../../../assets/image 12.png";
 import FormInput from "../../UI/FormInput/FormInput";
+import FormTextarea from "../../UI/FormTextarea/FormTextarea";
 const Contact = ({ className }) => {
   return (
     <div className={[sc.main, className].join(" ")}>
@@ -27,7 +28,11 @@ const Contact = ({ className }) => {
             type="text"
             placeholder="Интересуещий товар/услуга"
           />
-          <textarea placeholder="Сообщение"></textarea>
+          <FormTextarea
+            className={sc.textarea}
+            placeholder="Сообщение"
+            star={true}
+          />
         </div>
 
         <img src={img} alt="" />
