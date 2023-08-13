@@ -22,8 +22,9 @@
   display: flex;
   flex-direction: row;
 }
-.inputCon input,
+.inputCon .input,
 textarea {
+  width: 100%;
   border: 0;
   outline: none;
   background-color: #f3f3f3;
@@ -37,8 +38,9 @@ textarea {
   text-align: left;
 }
 
-.inputCon input::placeholder,
+.inputCon,
 textarea {
+  margin-bottom: 0;
   color: #8d8d8d;
 }
 .inputCon textarea {
