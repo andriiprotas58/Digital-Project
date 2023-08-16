@@ -2,13 +2,17 @@ import React from "react";
 import sc from "./Link.module.css";
 import arrow from "../../../assets/ico-shape.svg";
 
-const Link = ({ className, text, href = "", style = 0 }) => {
+const Link = (props) => {
   return (
     <a
-      className={[style ? sc.blackLink : sc.Link, className].join(" ")}
-      href={href}
+      href={""}
+      {...props}
+      style={{}}
+      className={[props.style ? sc.blackLink : sc.Link, props.className].join(
+        " "
+      )}
     >
-      {(text + " ").toUpperCase()}
+      {(props.text + " ").toUpperCase()}
       <img
         style={{
           MozTransform: "scaleX(-1)",
