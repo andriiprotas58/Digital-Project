@@ -21,9 +21,9 @@ const Projects = () => {
     <div className={sc.main}>
       <h1>Наши проекты</h1>
       <div className={sc.projects}>
-        {projects.map((e) => {
+        {projects.map((e, i) => {
           return (
-            <div className={sc.project}>
+            <div key={i} className={sc.project}>
               <img className={sc.img} src={e.img} alt="" />
               <div className={sc.blackwall}></div>
               <div className={sc.lincCon}>
@@ -36,7 +36,7 @@ const Projects = () => {
           );
         })}
       </div>
-      <Link className={sc.blackLink} text={"Все продукты"} style={1}/>
+      <Link className={sc.blackLink} text={"Все продукты"} style={1} />
     </div>
   );
 };
