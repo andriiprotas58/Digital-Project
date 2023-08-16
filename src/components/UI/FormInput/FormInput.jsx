@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import sc from "./Forminput.module.css";
 import { useRef } from "react";
 // { placeholder = "", star = false }
@@ -6,6 +6,14 @@ const FormInput = (props) => {
   const [placeholderStatus, setPlaceholderStatus] = useState(true);
   const originalOnChange = props.onChange;
   const inputRef = useRef(null);
+  useEffect(() => {
+    if (props.value) {
+      setPlaceholderStatus(false);
+    } else {
+      setPlaceholderStatus(true);
+    }
+  }, [props.value]);
+
   return (
     <div className={sc.inputCon}>
       <input
