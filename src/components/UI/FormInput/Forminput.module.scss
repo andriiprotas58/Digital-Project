@@ -1,30 +1,33 @@
+@import "../../../style/color";
+@import "../../../style/font";
 .inputCon {
   position: relative;
-  height: 100%;
 }
-
 .placeholderCon {
   display: flex;
   flex-direction: row;
   position: absolute;
   left: 0px;
-  top: 0;
+  top: calc(50% - 5px);
+  transform: translate(0, -50%);
 }
 
-.textarea {
-  background-color: #f3f3f3;
+.input {
+  background-color: $input-background-color;
+  padding: 15px 0;
 }
 
-.textarea,
+.input,
 .placeholderCon {
-  padding: 15px 21px;
+  padding-left: 21px;
+  padding-right: 21px;
 }
 
-.textarea,
+.input,
 .placeholder {
   border: 0;
   outline: none;
-  font-family: "TT Hoves";
+  font-family: $main-font;
   font-size: 14px;
   font-weight: 400;
   line-height: 17px;
@@ -33,7 +36,7 @@
 }
 
 .placeholder {
-  color: #8d8d8d;
+  color: $placeholder-font-color;
 }
 
 .star {
@@ -43,9 +46,10 @@
   line-height: 16px;
   letter-spacing: 0.04em;
   text-align: left;
-  color: #c30000;
+
+  color: $attantion-font-color;
 }
 
 .hide {
   display: none;
-}/*# sourceMappingURL=FormTextarea.module.css.map */
+}

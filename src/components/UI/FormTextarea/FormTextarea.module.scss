@@ -1,8 +1,10 @@
+@import "../../../style/_color.scss";
+@import "../../../style/font";
+
 .inputCon {
   position: relative;
   height: 100%;
 }
-
 .placeholderCon {
   display: flex;
   flex-direction: row;
@@ -12,7 +14,7 @@
 }
 
 .textarea {
-  background-color: #f3f3f3;
+  background-color: $input-background-color;
 }
 
 .textarea,
@@ -24,7 +26,7 @@
 .placeholder {
   border: 0;
   outline: none;
-  font-family: "TT Hoves";
+  font-family: $main-font;
   font-size: 14px;
   font-weight: 400;
   line-height: 17px;
@@ -33,9 +35,8 @@
 }
 
 .placeholder {
-  color: #8d8d8d;
+  color: $placeholder-font-color;
 }
-
 .star {
   font-family: Roboto;
   font-size: 14px;
@@ -43,9 +44,10 @@
   line-height: 16px;
   letter-spacing: 0.04em;
   text-align: left;
-  color: #c30000;
+
+  color: $attantion-font-color;
 }
 
 .hide {
   display: none;
-}/*# sourceMappingURL=FormTextarea.module.css.map */
+}

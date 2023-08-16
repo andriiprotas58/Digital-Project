@@ -2,6 +2,7 @@
   position: relative;
   width: 770px;
 }
+
 .banerLink {
   position: absolute;
   bottom: 0;
@@ -13,21 +14,18 @@
   justify-content: center;
   margin-right: 120px;
 }
-
 .banerText button {
   display: flex;
   width: 53px;
   height: 53px;
   justify-content: center;
   align-items: center;
-
   background-color: #f9f9f9;
   border: 1px solid #f2f2f2;
 }
 .banerText button:active {
   background-color: #f2f2f2;
 }
-
 .banerText button img {
   height: 8px;
 }
@@ -38,12 +36,13 @@
   justify-content: space-between;
   width: 130px;
 }
+
 .counter {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: row;
-  font-family: TT Hoves;
+  font-family: "TT Hoves";
   font-size: 24px;
   font-weight: 400;
   line-height: 24px;
@@ -51,6 +50,7 @@
   text-align: left;
   color: #e0e0e0;
 }
+
 .line {
   background-color: #e0e0e0;
   height: 44px;
@@ -58,11 +58,12 @@
   transform: rotate(-134.98deg);
   margin: 0 25px;
 }
+
 .banerText > div {
   margin-top: 90px;
 }
 .banerText h1 {
-  font-family: TT Hoves;
+  font-family: "TT Hoves";
   font-size: 64px;
   font-weight: 300;
   line-height: 64px;
@@ -71,10 +72,10 @@
   color: #bdbdbd;
 }
 .banerText h2 {
-  font-family: TT Hoves;
+  font-family: "TT Hoves";
   font-size: 64px;
   font-weight: 700;
   line-height: 64px;
   letter-spacing: 0em;
   text-align: left;
-}
+}/*# sourceMappingURL=Baner.module.css.map */
