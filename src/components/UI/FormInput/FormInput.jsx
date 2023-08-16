@@ -1,15 +1,15 @@
 import React, { useState } from "react";
 import sc from "./Forminput.module.css";
+import { useRef } from "react";
 // { placeholder = "", star = false }
 const FormInput = (props) => {
   const [placeholderStatus, setPlaceholderStatus] = useState(true);
   const originalOnChange = props.onChange;
-
-  const handleChange = (e) => {};
-
+  const inputRef = useRef(null);
   return (
     <div className={sc.inputCon}>
       <input
+        ref={inputRef}
         {...props}
         placeholder=""
         className={[sc.input, props.className].join(" ")}
@@ -33,6 +33,9 @@ const FormInput = (props) => {
         className={[sc.placeholderCon, placeholderStatus ? "" : sc.hide].join(
           " "
         )}
+        onClick={() => {
+          inputRef.current.focus();
+        }}
       >
         <div className={sc.placeholder}>{props.placeholder}</div>
         <div className={[sc.star, props.star ? "" : sc.hide].join(" ")}>*</div>

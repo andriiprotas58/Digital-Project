@@ -1,13 +1,14 @@
 import React, { useState } from "react";
 import sc from "./FormTextarea.module.css";
-
+import { useRef } from "react";
 const FormTextarea = (props) => {
   const [placeholderStatus, setPlaceholderStatus] = useState(true);
   const originalOnChange = props.onChange;
-
+  const inputRef = useRef(null);
   return (
     <div className={sc.inputCon}>
       <textarea
+        ref={inputRef}
         {...props}
         placeholder=""
         className={[sc.textarea, props.className].join(" ")}
@@ -30,6 +31,9 @@ const FormTextarea = (props) => {
         className={[sc.placeholderCon, placeholderStatus ? "" : sc.hide].join(
           " "
         )}
+        onClick={() => {
+          inputRef.current.focus();
+        }}
       >
         <div className={sc.placeholder}>{props.placeholder}</div>
         <div className={[sc.star, props.star ? "" : sc.hide].join(" ")}>*</div>
