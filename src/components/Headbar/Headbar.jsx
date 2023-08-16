@@ -15,9 +15,9 @@ const Headbar = () => {
     <div className={sc.main}>
       <img className={sc.conLogo} src={logo} alt="Digital project" />
       <div className={sc.conLinks}>
-        {headbarbuttons.map((e) => {
+        {headbarbuttons.map((e, i) => {
           return (
-            <a className={sc.mainlink} href={e.url}>
+            <a key={i} className={sc.mainlink} href={e.url}>
               {e.name.toUpperCase()}
             </a>
           );
