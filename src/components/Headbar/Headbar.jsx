@@ -19,6 +19,9 @@ const Headbar = () => {
           return (
             <a key={i} className={sc.mainlink} href={e.url}>
               {e.name.toUpperCase()}
+              <div>
+                <br />
+              </div>
             </a>
           );
         })}

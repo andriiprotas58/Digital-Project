@@ -20,6 +20,8 @@
 }
 
 .mainlink {
+  position: relative;
+
   font-family: $main-font;
   font-size: 12px;
   font-weight: 400;
@@ -28,17 +30,25 @@
   text-align: left;
   margin-right: 60px;
   cursor: pointer;
-  padding: 20px;
-  border-top: 5px solid rgb($main-font-color, 0);
-  border-bottom: 5px solid rgb($main-font-color, 0);
-  transition: all 0.3s ease-in-out;
-  padding-left: 0;
-  padding-right: 0;
+  padding: 25px 0;
+
+  > div {
+    position: absolute;
+    padding: 20px 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    border-top: 5px solid rgb($main-font-color, 0);
+    border-bottom: 5px solid rgb($main-font-color, 0);
+    transition: all 0.3s ease-in-out;
+  }
 
   &:hover {
-    padding: 5px 0;
-    border-top: 1px solid $main-font-color;
-    border-bottom: 1px solid $main-font-color;
+    div {
+      padding: 5px 0;
+      border-top: 1px solid $main-font-color;
+      border-bottom: 1px solid $main-font-color;
+    }
   }
 }
 
