@@ -1,17 +1,20 @@
+@import "../../../style/color";
+@import "./../../../style/font";
 .main {
   display: flex;
   flex-direction: column;
   width: 1170px;
-}
-.main h1 {
-  font-family: "TT Hoves";
-  font-size: 64px;
-  font-weight: 300;
-  line-height: 64px;
-  letter-spacing: 0em;
-  text-align: left;
-  color: #bdbdbd;
-  margin-bottom: 22px;
+
+  h1 {
+    font-family: $main-font;
+    font-size: 64px;
+    font-weight: 300;
+    line-height: 64px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: $title-color-font;
+    margin-bottom: 22px;
+  }
 }
 
 .Link {
@@ -66,12 +69,13 @@
   align-self: flex-start;
   display: flex;
   margin: 21px 0;
+
+  p {
+    font-family: $main-font;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 17px;
+    letter-spacing: 0.03em;
+    text-align: left;
+  }
 }
-.checkboxCon p {
-  font-family: "TT Hoves";
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 17px;
-  letter-spacing: 0.03em;
-  text-align: left;
-}/*# sourceMappingURL=Contact.module.css.map */

@@ -1,11 +1,15 @@
+@import "./../../style/color";
+@import "./../../style/font";
+
 .main {
   display: flex;
-  background-color: #fff;
+  background-color: $main-background-color;
   height: 102px;
   width: 100wh;
-  color: #333333;
+  color: $main-font-color;
   padding: 0 135px 0 135px;
   justify-content: center;
+
   /* -webkit-box-shadow: 0px -1px 12px 10px rgba(0, 0, 0, 0.58);
   -moz-box-shadow: 0px -1px 12px 10px rgba(0, 0, 0, 0.58);
   box-shadow: 0px -1px 12px 10px rgba(0, 0, 0, 0.58); */
@@ -16,7 +20,7 @@
 }
 
 .mainlink {
-  font-family: "TT Hoves";
+  font-family: $main-font;
   font-size: 12px;
   font-weight: 400;
   line-height: 12px;
@@ -25,16 +29,17 @@
   margin-right: 60px;
   cursor: pointer;
   padding: 20px;
-  border-top: 5px solid rgba(51, 51, 51, 0);
-  border-bottom: 5px solid rgba(51, 51, 51, 0);
+  border-top: 5px solid rgb($main-font-color, 0);
+  border-bottom: 5px solid rgb($main-font-color, 0);
   transition: all 0.3s ease-in-out;
   padding-left: 0;
   padding-right: 0;
-}
-.mainlink:hover {
-  padding: 5px 0;
-  border-top: 1px solid #333333;
-  border-bottom: 1px solid #333333;
+
+  &:hover {
+    padding: 5px 0;
+    border-top: 1px solid $main-font-color;
+    border-bottom: 1px solid $main-font-color;
+  }
 }
 
 .conLinks {
@@ -43,4 +48,4 @@
   flex-direction: row;
   margin-left: 330px;
   align-items: center;
-}/*# sourceMappingURL=Headbar.module.css.map */
+}

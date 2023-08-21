@@ -1,4 +1,3 @@
-import "./App.css";
 import Headbar from "../Headbar/Headbar.jsx";
 import Footer from "../Footer/Footer";
 import Content from "../Content/Content";
