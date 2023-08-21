@@ -1,0 +1,81 @@
+@import "../../../style/color";
+@import "./../../../style/font";
+.main {
+  display: flex;
+  flex-direction: column;
+  width: 1170px;
+
+  h1 {
+    font-family: $main-font;
+    font-size: 64px;
+    font-weight: 300;
+    line-height: 64px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: $title-color-font;
+    margin-bottom: 22px;
+  }
+}
+
+.Link {
+  align-self: flex-start;
+}
+
+.contactCon {
+  display: flex;
+  flex-direction: row;
+}
+
+.input {
+  width: 100%;
+  border: 0;
+  outline: none;
+  margin-bottom: 10px;
+}
+
+.textarea {
+  width: 100%;
+  border: 0;
+  outline: none;
+  margin-bottom: 10px;
+  margin-bottom: 0;
+  resize: none;
+  height: 100%;
+}
+
+.inputCon {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.contactCon img {
+  height: 369px;
+  margin-left: 30px;
+}
+
+.checkbox {
+  outline: 0;
+  height: 24px;
+  width: 24px;
+  margin-right: 1em;
+}
+
+.checkboxCon {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  max-width: 515px;
+  align-self: flex-start;
+  display: flex;
+  margin: 21px 0;
+
+  p {
+    font-family: $main-font;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 17px;
+    letter-spacing: 0.03em;
+    text-align: left;
+  }
+}

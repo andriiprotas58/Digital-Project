@@ -1,0 +1,53 @@
+@import "../../../style/_color.scss";
+@import "../../../style/font";
+
+.inputCon {
+  position: relative;
+  height: 100%;
+}
+.placeholderCon {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  left: 0px;
+  top: 0;
+}
+
+.textarea {
+  background-color: $input-background-color;
+}
+
+.textarea,
+.placeholderCon {
+  padding: 15px 21px;
+}
+
+.textarea,
+.placeholder {
+  border: 0;
+  outline: none;
+  font-family: $main-font;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17px;
+  letter-spacing: 0.04em;
+  text-align: left;
+}
+
+.placeholder {
+  color: $placeholder-font-color;
+}
+.star {
+  font-family: Roboto;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: 0.04em;
+  text-align: left;
+
+  color: $attantion-font-color;
+}
+
+.hide {
+  display: none;
+}

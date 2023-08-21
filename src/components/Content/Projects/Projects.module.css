@@ -1,0 +1,74 @@
+.main {
+  display: flex;
+  flex-direction: column;
+}
+.main h1 {
+  flex-direction: column;
+  font-family: "TT Hoves";
+  font-size: 64px;
+  font-weight: 300;
+  line-height: 64px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #bdbdbd;
+  margin-bottom: 60px;
+}
+
+.projects > div {
+  position: relative;
+}
+
+.img {
+  height: 255;
+  width: auto;
+}
+
+.link {
+  background-color: rgba(255, 255, 255, 0);
+  bottom: 0;
+  padding-left: 0;
+}
+
+.lincCon {
+  position: absolute;
+  left: 48px;
+  top: 48px;
+}
+
+.projects {
+  max-width: 1170px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.project {
+  margin-bottom: 30px;
+}
+.project h2 {
+  font-family: "TT Hoves";
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 64px;
+  letter-spacing: 0em;
+  text-align: left;
+  top: 48px;
+  color: #fff;
+}
+
+.blackwall {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  bottom: 0;
+  background-color: rgba(51, 51, 51, 0.8);
+  padding-left: 30px;
+}
+
+.project > * {
+  padding: 0;
+}
+
+.blackLink {
+  align-self: flex-end;
+}/*# sourceMappingURL=Projects.module.css.map */

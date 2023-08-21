@@ -1,0 +1,78 @@
+@import "../../../style/color";
+@import "./../../../style/font";
+.main {
+  display: flex;
+  flex-direction: column;
+
+  h1 {
+    flex-direction: column;
+    font-family: $main-font;
+    font-size: 64px;
+    font-weight: 300;
+    line-height: 64px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: $title-color-font;
+    margin-bottom: 60px;
+  }
+}
+
+.projects > div {
+  position: relative;
+}
+
+.img {
+  height: 255;
+  width: auto;
+}
+
+.link {
+  background-color: rgb($main-background-color, 00);
+  bottom: 0;
+  padding-left: 0;
+}
+
+.lincCon {
+  position: absolute;
+  left: 48px;
+  top: 48px;
+}
+
+.projects {
+  max-width: 1170px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.project {
+  margin-bottom: 30px;
+
+  h2 {
+    font-family: $main-font;
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 64px;
+    letter-spacing: 0em;
+    text-align: left;
+    top: 48px;
+    color: $footer-font-color;
+  }
+}
+
+.blackwall {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  bottom: 0;
+  background-color: rgb($main-font-color, 0.8);
+  padding-left: 30px;
+}
+
+.project > * {
+  padding: 0;
+}
+
+.blackLink {
+  align-self: flex-end;
+}
