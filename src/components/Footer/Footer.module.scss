@@ -49,7 +49,8 @@ h4 {
   margin-right: 40px;
 }
 
-.logo, .textblock {
+.logo,
+.textblock {
   margin-right: 80px;
 }
 
@@ -72,4 +73,28 @@ h4 {
   text-align: left;
   color: $font-color-2;
   border-top: 1px solid $font-color-2;
+}
+
+@media (max-width: 1024px) {
+  .main {
+    padding: 0 80px;
+    padding-top: 58px;
+  }
+}
+@media (max-width: 925px) {
+  .main {
+    padding: 0 40px;
+    padding-top: 58px;
+  }
+  .maincontent {
+    justify-content: left;
+    flex-direction: column;
+    flex-wrap: wrap;
+    > * {
+      margin: 0;
+    }
+    > * {
+      margin-bottom: 30px;
+    }
+  }
 }
