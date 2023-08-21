@@ -6,6 +6,7 @@
 
 .imgCon {
   display: flex;
+  width: 600px;
 }
 
 .img1,
@@ -43,11 +44,41 @@
   text-align: left;
 }
 .textCon h2 {
-  font-family: TT Hoves;
+  font-family: "TT Hoves";
   font-size: 64px;
   font-weight: 200;
   line-height: 64px;
   letter-spacing: 0em;
   text-align: left;
   color: #bdbdbd;
+}
+
+@media (max-width: 1405px) {
+  .main {
+    flex-direction: column;
+  }
+  .textCon {
+    align-items: center;
+  }
+  .textCon h2 {
+    margin-top: 10px;
+  }
+}
+@media (max-width: 832px) {
+  .textCon h2 {
+    font-size: 48px;
+  }
+  .imgCon {
+    flex-direction: column;
+    width: 270px;
+  }
+  .imgCon img {
+    margin: 0;
+    margin-bottom: 30px;
+  }
+}
+@media (max-width: 742px) {
+  .textCon h2 {
+    font-size: 28px;
+  }
 }/*# sourceMappingURL=About.module.css.map */
