@@ -59,9 +59,6 @@
   margin: 0 25px;
 }
 
-.banerText > div {
-  margin-top: 90px;
-}
 .banerText h1 {
   font-family: "TT Hoves";
   font-size: 64px;
@@ -78,4 +75,57 @@
   line-height: 64px;
   letter-spacing: 0em;
   text-align: left;
+}
+
+.buttandcount {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.buttandcount > div {
+  margin-top: 90px;
+}
+
+@media (max-width: 1200px) {
+  .baner {
+    width: 550px;
+  }
+}
+@media (max-width: 1024px) {
+  .banerText {
+    margin-right: 30px;
+  }
+}
+@media (max-width: 924px) {
+  .main {
+    flex-direction: column-reverse;
+  }
+  .banerText {
+    margin-right: 0;
+  }
+  .banerText h1 {
+    margin-right: 10px;
+  }
+  .banerText div {
+    margin-top: 30px;
+  }
+  .heading {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .buttandcount {
+    flex-direction: row;
+  }
+  .buttonBlock {
+    margin-right: 90px;
+  }
+}
+@media (max-width: 630px) {
+  .heading {
+    flex-direction: column;
+  }
+  .baner {
+    width: 440px;
+  }
 }/*# sourceMappingURL=Baner.module.css.map */

@@ -53,3 +53,31 @@
 .un {
   max-width: 570px;
 }
+
+@media (max-width: 1380px) {
+  .main {
+    width: auto;
+    > div {
+      align-self: center;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+}
+@media (max-width: 768px) {
+  .goal {
+    justify-content: center;
+  }
+  .text {
+    height: auto;
+    text-align: justify;
+  }
+  .main {
+    > div {
+      width: auto;
+    }
+  }
+  .un {
+    margin-top: 200px;
+  }
+}
