@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Digital-Project/static/css/main.017e1962.css",
-    "main.js": "/Digital-Project/static/js/main.328eea42.js",
+    "main.css": "/Digital-Project/static/css/main.c4b28924.css",
+    "main.js": "/Digital-Project/static/js/main.c5f869ad.js",
     "static/media/Rectangle 6.png": "/Digital-Project/static/media/Rectangle 6.62181abb6710a405a5bc.png",
     "static/media/1.jpg": "/Digital-Project/static/media/1.b2a55721bdfda940ff2a.jpg",
     "static/media/image 17.png": "/Digital-Project/static/media/image 17.53b0f08a7d5faa75e1fe.png",
@@ -24,11 +24,13 @@
     "static/media/mail.svg": "/Digital-Project/static/media/mail.4aba332e7ceb2933222e689fd505668e.svg",
     "static/media/ico-shape.svg": "/Digital-Project/static/media/ico-shape.92f5315cacfeaa51913d50a42c76b725.svg",
     "static/media/facebook.svg": "/Digital-Project/static/media/facebook.ec751c91911a79ca6815eab1a3d68d84.svg",
-    "main.017e1962.css.map": "/Digital-Project/static/css/main.017e1962.css.map",
-    "main.328eea42.js.map": "/Digital-Project/static/js/main.328eea42.js.map"
+    "static/media/close_FILL0_wght400_GRAD0_opsz48.svg": "/Digital-Project/static/media/close_FILL0_wght400_GRAD0_opsz48.f9e1fd884e38ced99e021f1ac47b347d.svg",
+    "static/media/menu_FILL0_wght400_GRAD0_opsz48.svg": "/Digital-Project/static/media/menu_FILL0_wght400_GRAD0_opsz48.62156aa1f3f8ed08b3c42f31823cbef1.svg",
+    "main.c4b28924.css.map": "/Digital-Project/static/css/main.c4b28924.css.map",
+    "main.c5f869ad.js.map": "/Digital-Project/static/js/main.c5f869ad.js.map"
   },
   "entrypoints": [
-    "static/css/main.017e1962.css",
-    "static/js/main.328eea42.js"
+    "static/css/main.c4b28924.css",
+    "static/js/main.c5f869ad.js"
   ]
 }
