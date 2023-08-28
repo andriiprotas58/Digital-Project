@@ -5,6 +5,7 @@
 /.pnp
 .pnp.js
 
+
 task.xlsx
 ~$task.xlsx
 # testing
@@ -20,6 +21,7 @@ task.xlsx
 .env.test.local
 .env.production.local
 .vscode
+task.xlsx
 
 npm-debug.log*
 yarn-debug.log*
