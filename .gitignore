@@ -6,8 +6,6 @@
 .pnp.js
 
 
-task.xlsx
-~$task.xlsx
 # testing
 /coverage
 
