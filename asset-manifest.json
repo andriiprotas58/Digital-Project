@@ -1,0 +1,34 @@
+{
+  "files": {
+    "main.css": "/Digital-Project/static/css/main.017e1962.css",
+    "main.js": "/Digital-Project/static/js/main.328eea42.js",
+    "static/media/Rectangle 6.png": "/Digital-Project/static/media/Rectangle 6.62181abb6710a405a5bc.png",
+    "static/media/1.jpg": "/Digital-Project/static/media/1.b2a55721bdfda940ff2a.jpg",
+    "static/media/image 17.png": "/Digital-Project/static/media/image 17.53b0f08a7d5faa75e1fe.png",
+    "static/media/image 15.png": "/Digital-Project/static/media/image 15.511fd9da1a7964f6a91c.png",
+    "static/media/image 12.png": "/Digital-Project/static/media/image 12.1279a1c553b61e3f37f4.png",
+    "static/media/image 18.png": "/Digital-Project/static/media/image 18.e38fe6d226926b126bf7.png",
+    "static/media/image 16.png": "/Digital-Project/static/media/image 16.6aa00ee25e89d6dbe09d.png",
+    "static/media/Rectangle 9.png": "/Digital-Project/static/media/Rectangle 9.03baee1e4af3ac8bcf59.png",
+    "static/media/Rectangle 12.png": "/Digital-Project/static/media/Rectangle 12.7410d8d00def7b53f477.png",
+    "static/media/Rectangle 8.png": "/Digital-Project/static/media/Rectangle 8.f99437daff3458a4e56a.png",
+    "static/media/Rectangle 10.png": "/Digital-Project/static/media/Rectangle 10.d028d6f567d15fe65b76.png",
+    "static/media/logofull.svg": "/Digital-Project/static/media/logofull.0ce135e8a487d174ca743e9d5e45430a.svg",
+    "static/media/Phone.svg": "/Digital-Project/static/media/Phone.2cf8bd88551299c3c2893a5157c54eba.svg",
+    "static/media/logofull_invert.svg": "/Digital-Project/static/media/logofull_invert.c7ba39174d8ec76bd1dafd6909f22787.svg",
+    "static/media/pininterest.svg": "/Digital-Project/static/media/pininterest.d40376952088106d9bb1680211c00dc7.svg",
+    "static/media/twitter.svg": "/Digital-Project/static/media/twitter.b6241475310fa070915dd9541856f8b9.svg",
+    "static/media/Linked In.svg": "/Digital-Project/static/media/Linked In.f83d089c21a600d6663fb62e131e40d6.svg",
+    "index.html": "/Digital-Project/index.html",
+    "static/media/Maps_point.svg": "/Digital-Project/static/media/Maps_point.709e7fcb554c0b79cee83fb83948b88f.svg",
+    "static/media/mail.svg": "/Digital-Project/static/media/mail.4aba332e7ceb2933222e689fd505668e.svg",
+    "static/media/ico-shape.svg": "/Digital-Project/static/media/ico-shape.92f5315cacfeaa51913d50a42c76b725.svg",
+    "static/media/facebook.svg": "/Digital-Project/static/media/facebook.ec751c91911a79ca6815eab1a3d68d84.svg",
+    "main.017e1962.css.map": "/Digital-Project/static/css/main.017e1962.css.map",
+    "main.328eea42.js.map": "/Digital-Project/static/js/main.328eea42.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.017e1962.css",
+    "static/js/main.328eea42.js"
+  ]
+}
