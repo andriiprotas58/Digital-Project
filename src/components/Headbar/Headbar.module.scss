@@ -1,16 +1,19 @@
 @import "./../../style/color";
 @import "./../../style/font";
 
+$mainHeight: 102px;
 .main {
   position: relative;
   display: flex;
   background-color: $main-background-color;
-  height: 102px;
+  height: $mainHeight;
   width: 100wh;
   color: $main-font-color;
   padding: 0 135px;
   justify-content: center;
   align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1em;
   /* -webkit-box-shadow: 0px -1px 12px 10px rgba(0, 0, 0, 0.58);
   -moz-box-shadow: 0px -1px 12px 10px rgba(0, 0, 0, 0.58);
   box-shadow: 0px -1px 12px 10px rgba(0, 0, 0, 0.58); */
@@ -69,9 +72,10 @@
   left: 40px;
 }
 
-.active {
+.miniConLinks * {
   display: none;
 }
+
 @media (max-width: 1200px) {
   .conLinks {
     margin-left: 230px;
@@ -110,6 +114,10 @@
 }
 
 @media (max-width: 480px) {
+  .miniConLinks * {
+    display: flex;
+  }
+
   .conLinks {
     display: none;
   }
@@ -117,20 +125,46 @@
   .limksButton {
     display: flex;
   }
+
+  $showsize: 60vw;
+
   .miniConLinks {
-    display: none;
+    display: flex;
     flex-direction: column;
-    padding-top: 100px;
+    padding-top: 0;
     align-items: center;
     z-index: 2;
-    top: 0;
+    top: $mainHeight;
     left: 0;
     height: 100vh;
     position: fixed;
-    width: 40vw;
+    width: $showsize;
     background-color: $main-background-color;
+
+    &Show {
+      animation: Show 0.5s ease-out forwards;
+    }
+    &Hide {
+      animation: Show 0.5s ease-out reverse;
+      &Done {
+        display: none;
+      }
+    }
   }
-  .active {
-    display: flex;
+
+  @keyframes Show {
+    0% {
+      display: none;
+      opacity: 0;
+      transform: translateX(-$showsize);
+    }
+    1% {
+      display: flex;
+    }
+    100% {
+      display: flex;
+      opacity: 1;
+      transform: translateX(0);
+    }
   }
 }

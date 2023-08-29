@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+
+import { CSSTransition } from "react-transition-group";
 import sc from "./Headbar.module.css";
 import logo from "../../assets/logofull.svg";
 import menu from "../../assets/menu_FILL0_wght400_GRAD0_opsz48.svg";
@@ -19,32 +21,35 @@ const Headbar = () => {
     <div className={sc.main}>
       <img
         className={sc.limksButton}
-        style={menuDisplay ? { position: "fixed" } : {}}
-        src={menuDisplay ? close : menu}
+        src={menu}
         alt=""
         onClick={() => {
           setMenuDisplay(!menuDisplay);
         }}
       />
-
-      <div
-        className={[sc.miniConLinks, menuDisplay ? sc.active : ""].join(" ")}
+      <CSSTransition
+        in={menuDisplay}
+        timeout={450}
+        classNames={{
+          enterActive: sc.miniConLinksShow,
+          exitActive: sc.miniConLinksHide,
+          exitDone: sc.miniConLinksHideDone,
+        }}
+        unmountOnExit
       >
-        {headbarbuttons.map((e, i) => {
-          return (
-            <a
-              key={i}
-              className={[sc.mainlink, sc.active].join(" ")}
-              href={e.url}
-            >
-              {e.name.toUpperCase()}
-              <div>
-                <br />
-              </div>
-            </a>
-          );
-        })}
-      </div>
+        <div className={sc.miniConLinks}>
+          {headbarbuttons.map((e, i) => {
+            return (
+              <a key={i} className={[sc.mainlink].join(" ")} href={e.url}>
+                {e.name.toUpperCase()}
+                <div>
+                  <br />
+                </div>
+              </a>
+            );
+          })}
+        </div>
+      </CSSTransition>
 
       <img className={sc.conLogo} src={logo} alt="Digital project" />
       <div className={sc.conLinks}>
