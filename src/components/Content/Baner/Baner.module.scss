@@ -3,35 +3,76 @@
 .baner {
   position: relative;
   width: 770px;
-}
+  height: calc(770px * 1.076363636363636);
 
-.banerLink {
-  position: absolute;
-  bottom: 0;
-}
+  &Show {
+    animation: Show 0.3s ease-out forwards;
+  }
 
-.banerText {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin-right: 120px;
+  &Hide {
+    animation: Show 0.3s ease-out reverse;
+  }
 
-  button {
+  &Link {
+    position: absolute;
+    bottom: 0;
+  }
+
+  &Text {
     display: flex;
-    width: 53px;
-    height: 53px;
+    flex-direction: column;
     justify-content: center;
-    align-items: center;
-    background-color: $button-background-color;
-    border: 1px solid $button-background-color-active;
+    margin-right: 120px;
 
-    &:active {
-      background-color: $button-background-color-active;
+    button {
+      display: flex;
+      width: 53px;
+      height: 53px;
+      justify-content: center;
+      align-items: center;
+      background-color: $button-background-color;
+      border: 1px solid $button-background-color-active;
+
+      &:active {
+        background-color: $button-background-color-active;
+      }
+
+      img {
+        height: 8px;
+      }
     }
 
-    img {
-      height: 8px;
+    h1 {
+      font-family: $main-font;
+      font-size: 64px;
+      font-weight: 300;
+      line-height: 64px;
+      letter-spacing: 0em;
+      text-align: left;
+      color: $title-color-font;
     }
+
+    h2 {
+      font-family: $main-font;
+      font-size: 64px;
+      font-weight: 700;
+      line-height: 64px;
+      letter-spacing: 0em;
+      text-align: left;
+    }
+  }
+}
+
+
+
+@keyframes Show {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
   }
 }
 
@@ -64,27 +105,6 @@
   margin: 0 25px;
 }
 
-.banerText {
-  h1 {
-    font-family: $main-font;
-    font-size: 64px;
-    font-weight: 300;
-    line-height: 64px;
-    letter-spacing: 0em;
-    text-align: left;
-    color: $title-color-font;
-  }
-
-  h2 {
-    font-family: $main-font;
-    font-size: 64px;
-    font-weight: 700;
-    line-height: 64px;
-    letter-spacing: 0em;
-    text-align: left;
-  }
-}
-
 .buttandcount {
   display: flex;
   flex-direction: column;
@@ -97,6 +117,7 @@
 @media (max-width: 1200px) {
   .baner {
     width: 550px;
+    height: calc(550px * 1.076363636363636);
   }
 }
 
@@ -139,5 +160,15 @@
   }
   .baner {
     width: 440px;
+    height: calc(440px * 1.076363636363636);
+  }
+}
+@media (max-width: 480px) {
+  .heading {
+    flex-direction: column;
+  }
+  .baner {
+    width: 320px;
+    height: calc(320px * 1.076363636363636);
   }
 }
