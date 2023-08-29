@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .main {
   display: flex;
   flex-direction: column;
@@ -21,6 +22,15 @@
 .contactCon {
   display: flex;
   flex-direction: row;
+}
+.contactCon img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 369px;
+  width: 749px;
+  margin-left: 30px;
+  -o-object-position: 50% 50%;
+     object-position: 50% 50%; /* задает центр обрезки */
 }
 
 .input {
@@ -46,11 +56,6 @@
   width: 100%;
 }
 
-.contactCon img {
-  height: 369px;
-  margin-left: 30px;
-}
-
 .checkbox {
   outline: 0;
   height: 24px;
@@ -74,4 +79,42 @@
   line-height: 17px;
   letter-spacing: 0.03em;
   text-align: left;
+}
+
+@media (max-width: 1250px) {
+  .main {
+    width: auto;
+  }
+  .inputCon {
+    min-width: 290px;
+  }
+  .contactCon img {
+    -o-object-fit: cover;
+       object-fit: cover;
+    height: 369px;
+    width: calc(100% - 320px);
+    margin-left: 30px;
+    -o-object-position: 100% 50%;
+       object-position: 100% 50%; /* задает центр обрезки */
+  }
+}
+@media (max-width: 1060px) {
+  .contactCon {
+    flex-direction: column-reverse;
+    width: 100%;
+  }
+  .contactCon img {
+    margin-bottom: 30px;
+    width: 100%;
+    margin-left: 0;
+  }
+}
+@media (max-width: 740px) {
+  .contactCon {
+    flex-direction: column-reverse;
+    width: 100%;
+  }
+  .contactCon img {
+    height: 200px;
+  }
 }/*# sourceMappingURL=Contact.module.css.map */
