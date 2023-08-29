@@ -15,6 +15,7 @@
   dl,
   dd {
     margin: 0;
+   
   }
   
   ul[role='list'],
@@ -30,6 +31,7 @@
     min-height: 100vh;
     text-rendering: optimizeSpeed;
     line-height: 1.5;
+    overflow-x: hidden;
   }
   
   a:not([class]) {

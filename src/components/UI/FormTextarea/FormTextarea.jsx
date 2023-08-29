@@ -1,10 +1,19 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import sc from "./FormTextarea.module.css";
 import { useRef } from "react";
 const FormTextarea = (props) => {
   const [placeholderStatus, setPlaceholderStatus] = useState(true);
   const originalOnChange = props.onChange;
   const inputRef = useRef(null);
+
+  useEffect(() => {
+    if (props.value) {
+      setPlaceholderStatus(false);
+    } else {
+      setPlaceholderStatus(true);
+    }
+  }, [props.value]);
+
   return (
     <div className={sc.inputCon}>
       <textarea
@@ -19,7 +28,7 @@ const FormTextarea = (props) => {
           }
 
           // дополнительный код
-          if (e.target.value.length > 0) {
+          if (e.target.value.length) {
             setPlaceholderStatus(false);
           } else {
             setPlaceholderStatus(true);

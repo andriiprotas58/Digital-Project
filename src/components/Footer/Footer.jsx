@@ -46,9 +46,9 @@ const Footer = () => {
         <img className={sc.logo} src={logo} alt="Didgital Project" />
         <div className={sc.textblock}>
           <h4>Информация</h4>
-          {headbarbuttons.map((e) => {
+          {headbarbuttons.map((e, i) => {
             return (
-              <a className={sc.mainlink} href={e.href}>
+              <a key={i} className={sc.mainlink} href={e.href}>
                 {e.name}
               </a>
             );
@@ -56,9 +56,9 @@ const Footer = () => {
         </div>
         <div className={sc.textblock}>
           <h4>Контакты</h4>
-          {contacts.map((e) => {
+          {contacts.map((e, i) => {
             return (
-              <div className={sc.mainlink}>
+              <div key={i} className={sc.mainlink}>
                 <img className={sc.icon} src={e.icon} alt="" />
                 <a className={sc.contact} href={e.href}>
                   {e.text}
@@ -70,9 +70,13 @@ const Footer = () => {
         <div className={sc.textblock}>
           <h4>Социальное</h4>
           <div className={sc.mainlink}>
-            {social.map((e) => {
+            {social.map((e, i) => {
               return (
-                <a className={[sc.icon, sc.social].join(" ")} href={e.href}>
+                <a
+                  key={i}
+                  className={[sc.icon, sc.social].join(" ")}
+                  href={e.href}
+                >
                   <img src={e.icon} alt="" />
                 </a>
               );
