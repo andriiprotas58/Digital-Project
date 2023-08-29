@@ -1,13 +1,18 @@
 .baner {
   position: relative;
   width: 770px;
+  height: 828.8px;
 }
-
+.banerShow {
+  animation: Show 0.3s ease-out forwards;
+}
+.banerHide {
+  animation: Show 0.3s ease-out reverse;
+}
 .banerLink {
   position: absolute;
   bottom: 0;
 }
-
 .banerText {
   display: flex;
   flex-direction: column;
@@ -29,7 +34,34 @@
 .banerText button img {
   height: 8px;
 }
+.banerText h1 {
+  font-family: "TT Hoves";
+  font-size: 64px;
+  font-weight: 300;
+  line-height: 64px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #bdbdbd;
+}
+.banerText h2 {
+  font-family: "TT Hoves";
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 64px;
+  letter-spacing: 0em;
+  text-align: left;
+}
 
+@keyframes Show {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
 .buttonBlock {
   display: flex;
   align-self: center;
@@ -59,24 +91,6 @@
   margin: 0 25px;
 }
 
-.banerText h1 {
-  font-family: "TT Hoves";
-  font-size: 64px;
-  font-weight: 300;
-  line-height: 64px;
-  letter-spacing: 0em;
-  text-align: left;
-  color: #bdbdbd;
-}
-.banerText h2 {
-  font-family: "TT Hoves";
-  font-size: 64px;
-  font-weight: 700;
-  line-height: 64px;
-  letter-spacing: 0em;
-  text-align: left;
-}
-
 .buttandcount {
   display: flex;
   flex-direction: column;
@@ -89,6 +103,7 @@
 @media (max-width: 1200px) {
   .baner {
     width: 550px;
+    height: 592px;
   }
 }
 @media (max-width: 1024px) {
@@ -127,5 +142,15 @@
   }
   .baner {
     width: 440px;
+    height: 473.6px;
+  }
+}
+@media (max-width: 480px) {
+  .heading {
+    flex-direction: column;
+  }
+  .baner {
+    width: 320px;
+    height: 344.4363636364px;
   }
 }/*# sourceMappingURL=Baner.module.css.map */

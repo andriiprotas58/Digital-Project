@@ -1,9 +1,10 @@
-import React, { useState } from "react";
+import React, { useEffect, useLayoutEffect, useState } from "react";
 import sc from "./Baner.module.css";
 import photo1 from "../../../assets/Rectangle 6.png";
 import photo2 from "../../../assets/1.jpg";
 import arrow from "../../../assets/ico-shape.svg";
 import Link from "../../UI/Link/Link";
+import { SwitchTransition, CSSTransition } from "react-transition-group";
 
 const Baner = ({ className }) => {
   const [baners, setBaner] = useState([
@@ -12,18 +13,47 @@ const Baner = ({ className }) => {
   ]);
 
   const [activeBaner, setActiveBaner] = useState(0);
+
+  const [activeData, setActiveData] = useState(baners[activeBaner]);
+
+  const [tumbler, setTumbler] = useState(false);
+
+  const [firstRander, setFirstRander] = useState(true);
+
+  useEffect(() => {
+    if (!firstRander) {
+      console.log("переключение");
+      setTumbler(!tumbler);
+    }
+  }, [activeBaner]);
+
   return (
     <div className={[className, sc.main].join(" ")}>
       <div className={sc.banerText}>
         <div className={sc.heading}>
-          <h1>{baners[activeBaner].text.split(" ")[0].toUpperCase()}</h1>
-          <h2>{baners[activeBaner].text.split(" ")[1].toUpperCase()}</h2>
+          <h1>{activeData.text.split(" ")[0].toUpperCase()}</h1>
+          <SwitchTransition>
+            <CSSTransition
+              key={tumbler}
+              timeout={250}
+              classNames={{
+                enterActive: sc.banerShow,
+                exitActive: sc.banerHide,
+              }}
+              onExited={() => {
+                setActiveData(baners[activeBaner]);
+              }}
+            >
+              <h2>{activeData.text.split(" ")[1].toUpperCase()}</h2>
+            </CSSTransition>
+          </SwitchTransition>
         </div>
 
         <div className={sc.buttandcount}>
           <div className={sc.buttonBlock}>
             <button
               onClick={() => {
+                setFirstRander(false);
                 if (activeBaner - 1 < 0) {
                   setActiveBaner(baners.length - 1);
                 } else {
@@ -35,6 +65,7 @@ const Baner = ({ className }) => {
             </button>
             <button
               onClick={() => {
+                setFirstRander(false);
                 if (activeBaner + 1 >= baners.length) {
                   setActiveBaner(0);
                 } else {
@@ -66,13 +97,29 @@ const Baner = ({ className }) => {
       </div>
 
       <div className={sc.baner}>
-        <img src={baners[activeBaner].img} alt="" />
+        <SwitchTransition>
+          <CSSTransition
+            key={tumbler}
+            timeout={250}
+            classNames={{
+              enterActive: sc.banerShow,
+              exitActive: sc.banerHide,
+            }}
+            onExited={() => {
+              setActiveData(baners[activeBaner]);
+            }}
+          >
+            <div>
+              <img src={activeData.img} alt="" />
 
-        <Link
-          className={sc.banerLink}
-          text={"Взглянуть"}
-          href={baners[activeBaner].herf}
-        />
+              <Link
+                className={sc.banerLink}
+                text={"Взглянуть"}
+                href={activeData.herf}
+              />
+            </div>
+          </CSSTransition>
+        </SwitchTransition>
       </div>
     </div>
   );
